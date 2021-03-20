@@ -54,7 +54,7 @@ const createCatCards = (cats) => {
       const fetchOptions = {
         method: 'DELETE',
         headers: {
-          'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
+          Authorization: 'Bearer ' + sessionStorage.getItem('token'),
         },
       };
       try {
@@ -88,7 +88,7 @@ const getCat = async () => {
   try {
     const options = {
       headers: {
-        'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
+        Authorization: 'Bearer ' + sessionStorage.getItem('token'),
       },
     };
     const response = await fetch(url + '/cat', options);
@@ -120,7 +120,7 @@ const getUsers = async () => {
   try {
     const options = {
       headers: {
-        'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
+        Authorization: 'Bearer ' + sessionStorage.getItem('token'),
       },
     };
     const response = await fetch(url + '/user', options);
@@ -138,7 +138,7 @@ addForm.addEventListener('submit', async (evt) => {
   const fetchOptions = {
     method: 'POST',
     headers: {
-      'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
+      Authorization: 'Bearer ' + sessionStorage.getItem('token'),
     },
     body: fd,
   };
@@ -156,7 +156,7 @@ modForm.addEventListener('submit', async (evt) => {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + sessionStorage.getItem('token'),
+      Authorization: 'Bearer ' + sessionStorage.getItem('token'),
     },
     body: JSON.stringify(data),
   };
